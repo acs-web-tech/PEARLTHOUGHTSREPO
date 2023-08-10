@@ -16,6 +16,7 @@ jobs:
                     port: 22
                     script: |
                          sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+                         sudo . ~/.nvm/nvm.sh
                          sudo apt install nodejs
                          sudo apt install npm
                          git clone https://github.com/acs-web-tech/PEARLTHOUGHTSREPO.git
