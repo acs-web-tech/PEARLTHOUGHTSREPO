@@ -7,6 +7,10 @@ jobs:
           steps:
                - name: Fetch
                  uses: actions/checkout@v3
+               - name: Install_Node
+                 uses: actions/setup-node@v2
+                 with: 
+                  node-version: "18"
                - name: SSH_EC2
                  uses: appleboy/ssh-action@master
                  with:
@@ -15,10 +19,6 @@ jobs:
                     username: ubuntu
                     port: 22
                     script: |
-                         sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-                         sudo . ~/.nvm/nvm.sh
-                         sudo nvm install --lts
-                         sudo . ~/.nvm/nvm.sh
                          sudo git clone https://github.com/acs-web-tech/PEARLTHOUGHTSREPO.git
                          cd PEARLTHOUGHTSREPO
                          sudo npm -g install pm2
