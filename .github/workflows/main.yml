@@ -10,7 +10,7 @@ jobs:
                - name: SSH_EC2
                  uses: appleboy/ssh-action@master
                  with:
-                    host: 3.88.208.120
+                    host: 44.202.26.69
                     key: ${{secrets.BRANCH}}
                     username: ubuntu
                     port: 22
