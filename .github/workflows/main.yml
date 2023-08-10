@@ -20,6 +20,7 @@ jobs:
                          nvm install --lts
                          git clone https://github.com/acs-web-tech/PEARLTHOUGHTSREPO.git
                          cd PEARLTHOUGHTSREPO
+                         npm install express
                          npm -g install pm2
                          pm2 start index.js
                     
